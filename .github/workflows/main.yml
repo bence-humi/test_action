@@ -12,7 +12,7 @@ jobs:
         with:
           ref: ${{ github.context.payload.pull_request.base.ref }}
       - name: Install git
-        run: apt update && apt install git -y && git branch --show-current
+        run: sudo apt update && sudo apt install git -y && git branch --show-current
       - name: Blame Alert
         uses: molleer/blame-alert@master
         with:
